@@ -573,7 +573,7 @@ nnoremap <leader>a gg"ayG<C-o><C-o>
 nnoremap <leader>aa "aygg<C-o><C-o>
 nnoremap <F5> <bar> :w <bar> exe "normal <leader>a" <bar> call RunTmuxPythonReg()<CR>
 nnoremap <F6> <bar> :exe "normal <leader>aa" <bar> call RunTmuxPythonReg()<CR>
-autocmd filetype python nnoremap <silent> <leader>b Oimport ipdb; ipdb.set_trace() # XXX BREAKPOINT<esc>
+autocmd filetype python nnoremap <silent> <leader>b Oimport ipdb; ipdb.set_trace(context=20) # XXX BREAKPOINT<esc>
 nnoremap <C-c> :call RunTmuxPythonCell()<CR>
 
 let g:cellmode_tmux_sessionname='ipython'  " Will try to automatically pickup tmux session
